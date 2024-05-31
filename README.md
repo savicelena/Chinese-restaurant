@@ -10,6 +10,11 @@ npm install
 npm run serve
 ```
 
+### For enabling different languages
+```
+npm install vue-i18n@next
+```
+
 ### Compiles and minifies for production
 ```
 npm run build
@@ -22,3 +27,6 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+
