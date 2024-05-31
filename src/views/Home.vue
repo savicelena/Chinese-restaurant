@@ -36,19 +36,21 @@
     }
 
     .navbar {
-        justify-content: left;
+        justify-content: center;
+        display: grid;
     }
 
 
     .navbar>a{
         color: #155263;
         font-size: 20px;
-        text-align: left;
+        text-align: center;
         padding: 10%;
+        
     }
 
     .menu{
-        background-color: #ffd360;
+        background-color: #f05a38;
     }
 </style>
 

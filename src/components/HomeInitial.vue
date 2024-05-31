@@ -32,9 +32,9 @@
     #welcome{
         font-family: cursive;
         font-weight: bolder;
-        font-size: 50px;
+        font-size: 60px;
         color: #ffd360;
-         -webkit-text-stroke: 3px #155263;
+        -webkit-text-stroke: 3px #155263;
     }
 </style>
 

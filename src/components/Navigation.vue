@@ -1,6 +1,8 @@
 <template>
-    <nav class="navbar">
-        <ul>
+<div class="container">
+  <div class="row">
+    <nav class="navbar navbar-expand-lg navbar-custom col-sm-12">
+        <ul class="navbarUl">
             <li><router-link to="/" class="link">{{$t ('home')}}</router-link></li>
             <li><router-link to="/gallery" class="link" >{{$t ('gallery')}}</router-link></li>
             <li><router-link to="/menu" class="link">{{$t ('menu')}}</router-link></li>
@@ -10,20 +12,27 @@
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 {{$t ('langChoose')}}
                 </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item link" href="#" @click="changeLang('sr')">{{$t ('serbian')}}</a>
-                    <a class="dropdown-item link" href="#" @click="changeLang('en')">{{$t ('english')}}</a>
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item link" href="#" @click="changeLang('sr')">{{$t ('serbian')}}</a>
+                  <a class="dropdown-item link" href="#" @click="changeLang('en')">{{$t ('english')}}</a>
                 </div>
             </li>
         </ul>
     </nav>
+  </div>
+</div>
+    
 </template>
 
 <style scoped>
-    .navbar {
+  .navbar {
     padding: 0;
     display: flex;
     justify-content: center;
+    /* postavljanje da može da se scroll-uje na malim ekranima*/
+    flex-wrap: nowrap;
+    /* overflow-x: auto; */
+    vertical-align:top;
   }
 
   .navbar ul {
@@ -58,6 +67,7 @@
   .link:hover{
     color: #ffd360;
   }
+
 
   
 
