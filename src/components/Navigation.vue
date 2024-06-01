@@ -9,7 +9,7 @@
             <li><router-link to="/account" class="link" >{{$t ('myAccount')}}</router-link></li>
             <li><router-link to="/about" class="link">{{$t ('about')}}</router-link></li>
             <li class="dropdown" id="drop">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link dropdown-toggle link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 {{$t ('langChoose')}}
                 </a>
                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
@@ -34,6 +34,7 @@
     /* overflow-x: auto; */
     vertical-align:top;
   }
+
 
   .navbar ul {
     margin: 0;
@@ -68,6 +69,10 @@
     color: #ffd360;
   }
 
+  .link{
+    font-family: cursive;
+  }
+
 
   
 
@@ -78,9 +83,9 @@
     export default{
         name: "Navigation",
         methods: {
-            changeLang(lang){
-                this.$i18n.locale = lang;  
-            }
+          changeLang(lang){
+            this.$i18n.locale = lang;  
+          }
         }
     }
 </script>

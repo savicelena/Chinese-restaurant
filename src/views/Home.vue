@@ -4,10 +4,10 @@
 
             <div class="col-lg-2 col-md-3 col-sm-12 menu">
                 <nav class="navbar">
-                    <a href="#" @click="changeComponent(0)">{{$t ('home')}}</a> 
-                    <a href="#" @click="changeComponent(1)">{{$t ('actions')}}</a> 
-                    <a href="#" @click="changeComponent(2)">{{$t ('newWorkers')}}</a> 
-                    <a href="#" @click="changeComponent(3)">{{$t ('bestGraded')}}</a> 
+                    <a href="#" @click="changeComponent(0)" class="links">{{$t ('home')}}</a> 
+                    <a href="#" @click="changeComponent(1)" class="links">{{$t ('actions')}}</a> 
+                    <a href="#" @click="changeComponent(2)" class="links">{{$t ('newWorkers')}}</a> 
+                    <a href="#" @click="changeComponent(3)" class="links">{{$t ('bestGraded')}}</a> 
                 </nav>
             </div>
 
@@ -50,7 +50,11 @@
     }
 
     .menu{
-        background-color: #f05a38;
+        background-color: #ffd360;
+    }
+
+    .links{
+        font-family: cursive;
     }
 </style>
 
