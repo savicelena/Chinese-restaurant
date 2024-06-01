@@ -32,7 +32,7 @@ export default {
     },
     created() {
         // Učitavamo glavna jela kad se komponenta kreira
-        this.mainCourses = require('@/data/mainCourse.json');
+        this.mainCourses = require('@/data/desserts.json');
     }
 }
 </script>

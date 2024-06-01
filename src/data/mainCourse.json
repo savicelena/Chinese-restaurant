@@ -1,0 +1,43 @@
+[
+    {
+        "id": 1,
+        "name": "Chicken rice",
+        "photo": "/images/chicken_rice_lunch.jpeg",
+        "price": "$55",
+        "desc": {
+            "sr": "Opis na srpskom jeziku",
+            "en": "Description in English"
+        }
+    },
+    {
+        "id": 2,
+        "name": "Barbecue",
+        "photo": "/images/lunch_food2.jpg",
+        "price": "$65",
+        "desc": {
+            "sr": "Opis na srpskom jeziku",
+            "en": "Description in English"
+        }
+    },
+    {
+        "id": 3,
+        "name": "Barbecue with pepper",
+        "photo": "/images/lunch_food3.jpeg",
+        "price": "$25",
+        "desc": {
+            "sr": "Opis na srpskom jeziku",
+            "en": "Description in English"
+        }
+    },
+    {
+        "id": 4,
+        "name": "Soup",
+        "photo": "/images/lunch_food4.jpg",
+        "price": "$35",
+        "desc": {
+            "sr": "Opis na srpskom jeziku",
+            "en": "Description in English"
+        }
+    }
+
+]

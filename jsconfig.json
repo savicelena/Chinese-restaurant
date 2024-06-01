@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "module": "esnext",
+    "target": "es2020", // ili "es2017" ili viši nivo
+    "module": "esnext", // ili "es2022", "system", "node16", "nodenext", "preserve"
+    "moduleResolution": "node",
     "baseUrl": "./",
     "moduleResolution": "node",
     "paths": {

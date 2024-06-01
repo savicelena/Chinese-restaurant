@@ -1,0 +1,43 @@
+[
+    {
+        "id": 1,
+        "name": "Dumplings",
+        "photo": "/images/appet1.jpg",
+        "price": "$5",
+        "desc": {
+            "sr": "Opis na srpskom jeziku",
+            "en": "Description in English"
+        }
+    },
+    {
+        "id": 2,
+        "name": "Chinese dumplings",
+        "photo": "/images/appet2.png",
+        "price": "$25",
+        "desc": {
+            "sr": "Opis na srpskom jeziku",
+            "en": "Description in English"
+        }
+    },
+    {
+        "id": 3,
+        "name": "Salad",
+        "photo": "/images/appet3.jpg",
+        "price": "$15",
+        "desc": {
+            "sr": "Opis na srpskom jeziku",
+            "en": "Description in English"
+        }
+    },
+    {
+        "id": 4,
+        "name": "Full appetizer",
+        "photo": "/images/appet4.jpg",
+        "price": "$10",
+        "desc": {
+            "sr": "Opis na srpskom jeziku",
+            "en": "Description in English"
+        }
+    }
+
+]

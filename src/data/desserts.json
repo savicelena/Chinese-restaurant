@@ -1,0 +1,43 @@
+[
+    {
+        "id": 1,
+        "name": "Chocolate",
+        "photo": "/images/dessert1.jpg",
+        "price": "$5",
+        "desc": {
+            "sr": "Opis na srpskom jeziku",
+            "en": "Description in English"
+        }
+    },
+    {
+        "id": 2,
+        "name": "Fortune cookies",
+        "photo": "/images/dessert4.png",
+        "price": "$25",
+        "desc": {
+            "sr": "Opis na srpskom jeziku",
+            "en": "Description in English"
+        }
+    },
+    {
+        "id": 3,
+        "name": "Cookies",
+        "photo": "/images/dessert3.jpg",
+        "price": "$15",
+        "desc": {
+            "sr": "Opis na srpskom jeziku",
+            "en": "Description in English"
+        }
+    },
+    {
+        "id": 4,
+        "name": "Gnochi",
+        "photo": "/images/dessert2.jpg",
+        "price": "$10",
+        "desc": {
+            "sr": "Opis na srpskom jeziku",
+            "en": "Description in English"
+        }
+    }
+
+]
