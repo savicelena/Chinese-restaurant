@@ -13,8 +13,8 @@
                 {{$t ('langChoose')}}
                 </a>
                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item link" href="#" @click="changeLang('sr')">{{$t ('serbian')}}</a>
-                  <a class="dropdown-item link" href="#" @click="changeLang('en')">{{$t ('english')}}</a>
+                  <a class="dropdown-item link" href="#" @click.prevent="changeLang('sr')">{{$t ('serbian')}}</a>
+                  <a class="dropdown-item link" href="#" @click.prevent="changeLang('en')">{{$t ('english')}}</a>
                 </div>
             </li>
         </ul>
