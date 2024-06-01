@@ -1,8 +1,5 @@
 <template>
     Menu
-	<div>
-	MENI
-	</div>
 </template>
 
 <script>
