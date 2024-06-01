@@ -11,7 +11,7 @@
                         </div>
                     </a>
                 </div>
-                <!-- Dugme za sortiranje -->
+                <!-- Dugme za sortiranje i polje za pretraživanje -->
                 <div class="sort-menu mt-3">
                     <button class="sort-button" @click="toggleDropdown">
                         Sortiraj
@@ -20,6 +20,9 @@
                         <li><a class="dropdown-item" href="#" @click.prevent="sortMenu('price')">{{ $t('Sort by Price') }}</a></li>
                         <li><a class="dropdown-item" href="#" @click.prevent="sortMenu('name')">{{ $t('Sort by Name') }}</a></li>
                     </ul>
+                </div>
+                <div class="search-menu mt-3">
+                    <input type="text" v-model="searchQuery" @input="filterMenu" placeholder="Pretraži hranu...">
                 </div>
             </div>
             <div class="menu">
@@ -46,9 +49,9 @@
             </div>
             
             <div class="col-lg-10 col-md-9 col-sm-12" id="main">
-                <main-course v-if="chosen[0]" :items="sortedItems" :sortType="sortType"></main-course>
-                <dessert v-if="chosen[1]" :items="sortedItems" :sortType="sortType"></dessert>
-                <appetizer v-if="chosen[2]" :items="sortedItems" :sortType="sortType"></appetizer>
+                <main-course v-if="chosen[0]" :items="filteredItems" :sortType="sortType"></main-course>
+                <dessert v-if="chosen[1]" :items="filteredItems" :sortType="sortType"></dessert>
+                <appetizer v-if="chosen[2]" :items="filteredItems" :sortType="sortType"></appetizer>
             </div>
         </div>
     </div>   
@@ -75,6 +78,7 @@ export default {
             sorted: false,
             sortType: '',
             showDropdown: false,
+            searchQuery: '',
             foodData: mainCourses // Početni podaci su za glavna jela
         }
     },
@@ -89,6 +93,9 @@ export default {
                 }
             }
             return sortedData;
+        },
+        filteredItems() {
+            return this.sortedItems.filter(item => item.name.toLowerCase().includes(this.searchQuery.toLowerCase()));
         }
     },
     methods: {
@@ -110,10 +117,14 @@ export default {
         },
         toggleDropdown() {
             this.showDropdown = !this.showDropdown;
+        },
+        filterMenu() {
+            this.searchQuery = this.searchQuery.trim();
         }
     }
 }
 </script>
+
 
 <style scoped>
 .menu {
@@ -200,5 +211,17 @@ export default {
 
 .dropdown-item:hover {
     background-color: #f0f0f0;
+}
+
+.search-menu {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.search-menu input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 </style>
