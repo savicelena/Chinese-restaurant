@@ -113,5 +113,10 @@
     "dessert": "Dezert",
     "Most popular items": "Najpoznatija jela",
     "Food menu" : "Jelovnik",
-    "Download Menu" : "Preuzmi jelovnik"
+    "Download Menu" : "Preuzmi jelovnik",
+    "Sort" : "Sortiraj",
+    "Sort by Price": "Sortiraj po ceni",
+    "Sort by Name": "Sortiraj po imenu",
+    "Search by Name" : "Pretraži po imenu",
+    "Search by Price" : "Pretraži po ceni"
 }

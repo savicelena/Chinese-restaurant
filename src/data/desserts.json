@@ -4,6 +4,7 @@
         "name": "Chocolate",
         "photo": "/images/dessert1.jpg",
         "price": "$5",
+        "grade" : "4",
         "desc": {
             "sr": "Opis na srpskom jeziku",
             "en": "Description in English"
@@ -14,6 +15,7 @@
         "name": "Fortune cookies",
         "photo": "/images/dessert4.png",
         "price": "$25",
+        "grade" : "4",
         "desc": {
             "sr": "Opis na srpskom jeziku",
             "en": "Description in English"
@@ -24,6 +26,7 @@
         "name": "Cookies",
         "photo": "/images/dessert3.jpg",
         "price": "$15",
+        "grade" : "4",
         "desc": {
             "sr": "Opis na srpskom jeziku",
             "en": "Description in English"
@@ -34,6 +37,7 @@
         "name": "Gnochi",
         "photo": "/images/dessert2.jpg",
         "price": "$10",
+        "grade" : "4",
         "desc": {
             "sr": "Opis na srpskom jeziku",
             "en": "Description in English"

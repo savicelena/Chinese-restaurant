@@ -1,4 +1,6 @@
 <template>
+    <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></head>
     <div class="container">
         <div class="row">
             <div v-for="item in items" :key="item.id" class="col-lg-6 d-flex align-items-center mb-4">
@@ -7,15 +9,12 @@
                     <h5 class="d-flex justify-content-between border-bottom pb-2">
                         <span>{{ item.name }}</span>
                         <span class="text-primary">{{ item.price }}</span>
+                        <span class="text-primary">{{ item.grade }}
+                            <i class="fa fa-star star-icon"></i>
+                        </span>
                     </h5>
                     <small class="fst-italic">{{ item.desc.en }}</small>
-                    <div class="rating mt-2">
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star"></span>
-                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -37,13 +36,14 @@ export default {
 }
 </script>
 
+
 <style scoped>
 .rating .fa-star {
-    color: #ddd; /* Siva boja za neaktivne zvezdice */
+    color: #ddd; 
 }
 
 .rating .checked {
-    color: #ffcc00; /* Zlatna boja za aktivne zvezdice */
+    color: #ffcc00;
 }
 
 .mt-2 {
@@ -58,12 +58,12 @@ export default {
 .row {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px; /* Dodaj razmak između kartica */
+    gap: 20px; 
 }
 
 .col-lg-6 {
-    flex: 1 1 calc(50% - 20px); /* Širina 50% minus razmak između kartica */
-    box-sizing: border-box; /* Osigurava da padding i border ne utiču na širinu */
+    flex: 1 1 calc(50% - 20px); 
+    box-sizing: border-box; 
 }
 
 img {
@@ -77,4 +77,16 @@ img {
     flex-direction: column;
     justify-content: space-between;
 }
+
+.text-primary {
+    display: flex;
+    align-items: center;
+}
+
+.star-icon {
+    margin-left: 5px; 
+    color: #ffcc00; 
+}
 </style>
+
+

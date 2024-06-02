@@ -4,6 +4,7 @@
         "name": "Chicken rice",
         "photo": "/images/chicken_rice_lunch.jpeg",
         "price": "$55",
+        "grade" : "4",
         "desc": {
             "sr": "Opis na srpskom jeziku",
             "en": "Description in English"
@@ -14,6 +15,7 @@
         "name": "Barbecue",
         "photo": "/images/lunch_food2.jpg",
         "price": "$65",
+        "grade" : "4",
         "desc": {
             "sr": "Opis na srpskom jeziku",
             "en": "Description in English"
@@ -24,6 +26,7 @@
         "name": "Barbecue with pepper",
         "photo": "/images/lunch_food3.jpeg",
         "price": "$25",
+        "grade" : "4",
         "desc": {
             "sr": "Opis na srpskom jeziku",
             "en": "Description in English"
@@ -34,6 +37,7 @@
         "name": "Soup",
         "photo": "/images/lunch_food4.jpg",
         "price": "$35",
+        "grade" : "4",
         "desc": {
             "sr": "Opis na srpskom jeziku",
             "en": "Description in English"

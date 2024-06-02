@@ -11,10 +11,10 @@
                         </div>
                     </a>
                 </div>
-                <!-- Dugme za sortiranje i polje za pretraživanje -->
+                <!-- Dugme za sortiranje i polja za pretraživanje -->
                 <div class="sort-menu mt-3">
                     <button class="sort-button" @click="toggleDropdown">
-                        Sortiraj
+                        {{$t('Sort')}}
                     </button>
                     <ul v-if="showDropdown" class="dropdown-menu">
                         <li><a class="dropdown-item" href="#" @click.prevent="sortMenu('price')">{{ $t('Sort by Price') }}</a></li>
@@ -22,7 +22,10 @@
                     </ul>
                 </div>
                 <div class="search-menu mt-3">
-                    <input type="text" v-model="searchQuery" @input="filterMenu" placeholder="Pretraži hranu...">
+                    <input type="text" v-model="searchQueryName" @input="filterMenu" :placeholder="$t('Search by Name')">
+                </div>
+                <div class="search-menu mt-3">
+                    <input type="text" v-model="searchQueryPrice" @input="filterMenu" :placeholder="$t('Search by Price')">
                 </div>
             </div>
             <div class="menu">
@@ -78,7 +81,8 @@ export default {
             sorted: false,
             sortType: '',
             showDropdown: false,
-            searchQuery: '',
+            searchQueryName: '',
+            searchQueryPrice: '',
             foodData: mainCourses // Početni podaci su za glavna jela
         }
     },
@@ -95,7 +99,14 @@ export default {
             return sortedData;
         },
         filteredItems() {
-            return this.sortedItems.filter(item => item.name.toLowerCase().includes(this.searchQuery.toLowerCase()));
+            let filteredData = this.sortedItems;
+            if (this.searchQueryName) {
+                filteredData = filteredData.filter(item => item.name.toLowerCase().includes(this.searchQueryName.toLowerCase()));
+            }
+            if (this.searchQueryPrice) {
+                filteredData = filteredData.filter(item => item.price.replace('$', '').includes(this.searchQueryPrice));
+            }
+            return filteredData;
         }
     },
     methods: {
@@ -119,7 +130,8 @@ export default {
             this.showDropdown = !this.showDropdown;
         },
         filterMenu() {
-            this.searchQuery = this.searchQuery.trim();
+            this.searchQueryName = this.searchQueryName.trim();
+            this.searchQueryPrice = this.searchQueryPrice.trim();
         }
     }
 }
@@ -168,7 +180,7 @@ export default {
 }
 
 .sort-button {
-    background-color: #ff9900; /* Narandžasta boja za dugme */
+    background-color: #ff9900; 
     color: white;
     border: none;
     padding: 10px 20px;
@@ -178,7 +190,7 @@ export default {
 }
 
 .sort-button:hover {
-    background-color: #e68a00; /* Tamnija nijansa narandžaste za hover */
+    background-color: #e68a00; 
 }
 
 .dropdown-menu {
