@@ -3,7 +3,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></head>
     <div class="container">
         <div class="row">
-            <div v-for="item in items" :key="item.id" class="col-lg-6 d-flex align-items-center mb-4">
+            <div v-for="item in items" :key="item.id" class="col-lg-6 d-flex align-items-center mb-4" @click="selectFood(item.id)">
                 <img class="flex-shrink-0 img-fluid rounded" :src="item.photo" alt="" style="width: 80px;">
                 <div class="w-100 d-flex flex-column text-start ps-4">
                     <h5 class="d-flex justify-content-between border-bottom pb-2">
@@ -31,9 +31,14 @@ export default {
     },
     created() {
         this.mainCourses = require('@/data/appetizers.json');
+    },methods: {
+    selectFood(foodId) {
+      this.$emit('food-selected', foodId);
     }
+  }
 }
 </script>
+
 <style scoped>
 .rating .fa-star {
     color: #ddd; 

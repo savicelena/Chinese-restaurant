@@ -1,6 +1,6 @@
 [
     {
-        "id": 1,
+        "id": 9,
         "name": "Chocolate",
         "photo": "/images/dessert1.jpg",
         "price": "$5",
@@ -11,7 +11,7 @@
         }
     },
     {
-        "id": 2,
+        "id": 10,
         "name": "Fortune cookies",
         "photo": "/images/dessert4.png",
         "price": "$25",
@@ -22,7 +22,7 @@
         }
     },
     {
-        "id": 3,
+        "id": 11,
         "name": "Cookies",
         "photo": "/images/dessert3.jpg",
         "price": "$15",
@@ -33,7 +33,7 @@
         }
     },
     {
-        "id": 4,
+        "id": 12,
         "name": "Gnochi",
         "photo": "/images/dessert2.jpg",
         "price": "$10",
