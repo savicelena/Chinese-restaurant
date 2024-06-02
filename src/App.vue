@@ -2,6 +2,7 @@
   <Header></Header>
   <Navigation></Navigation>
   <router-view/>
+  <FooterComp></FooterComp>
 </template>
 
 <style>
@@ -30,11 +31,12 @@ nav a.router-link-exact-active {
 <script>
   import Navigation from "@/components/Navigation.vue"
   import Header from "@/components/Header.vue"
+  import FooterComp from "@/components/FooterComp.vue"
 
   export default{
     name: "App",
     components: {
-      Navigation, Header
+      Navigation, Header, FooterComp
     }
   }
 </script>
