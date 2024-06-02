@@ -108,7 +108,7 @@
 
     .carouselExampleIndicators{
         width: 50%;
-        background-color: rgb(240, 90, 56, .5);
+        background-color: rgb(225, 207, 83, .5);
         padding: 5%;
         border-radius: 10%;
         width: 70%;
