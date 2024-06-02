@@ -4,6 +4,7 @@ import Gallery from '../views/Gallery.vue'
 import About from '../views/About.vue'
 import Account from '../views/Account.vue'
 import Menu from '../views/MenuFood.vue'
+import FoodDetail from "../views/FoodDetail.vue"
 
 
 const routes = [
@@ -29,6 +30,10 @@ const routes = [
     path: '/about',
     name: 'About',
     component: About
+  }, {
+    path : '/menu/:id',
+    name : 'FoodDetail',
+    component : FoodDetail
   }
 ]
 

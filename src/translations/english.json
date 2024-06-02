@@ -114,5 +114,10 @@
     "dessert": "Dessert",
     "Most popular items": "Most popular items",
     "Food menu" : "Food menu",
-    "Download Menu" : "Download menu"
+    "Download Menu" : "Download menu",
+    "Sort" : "Sort",
+    "Sort by Price": "Sort by price",
+    "Sort by Name": "Sort by name",
+    "Search by Name" : "Search by name",
+    "Search by Price" : "Search by price"
 }
