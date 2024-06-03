@@ -1,5 +1,5 @@
 <template>
-    <div class="container-fluid">
+    <div class="container-fluid borderUp">
 
         <div class="row">
             <div class="col-sm-12">
@@ -73,6 +73,10 @@
 </template>
 
 <style scoped>
+
+    .borderUp{
+        border-top: 1px solid #155263;
+    }
     .column{
         border: 1px solid #155263;
     }

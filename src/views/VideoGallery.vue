@@ -1,13 +1,8 @@
 <template>
-    <div class="container-fluid" >
+    
+    <div class="container-fluid">
         <div class="row">
-
-            <div class="col-lg-2 col-md-3 col-sm-12 menu">
-                <HomeMenu></HomeMenu>
-            </div>
-
-
-            <div class="col-lg-10 col-md-9 col-sm-12" id="main">
+            <div class="col-sm-12">
                 <div class="divCrumbs mt-3">
                     <ol class="breadcrumb crumbs">
                         <li v-for="bread in breadcrumb" :key="bread.text" :class="bread.active == true ? 'breadcrumb-item active' : 'breadcrumb-item'">
@@ -16,22 +11,32 @@
                         </li>
                     </ol>
                 </div>
-                <NewWorkers></NewWorkers>
-                
-               
             </div>
+        </div>
 
+        <div class="row mt-3">
+            <div class="col-sm-12 text-center">
+                <h3 class="title">{{$t ('videoG')}}</h3>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-sm-12 mb-5">
+                <iframe src="https://www.youtube.com/embed/EmVxWKy_pu0" frameborder="0"></iframe>
+                <h5 class="title desc">{{$t ("video1Desc")}}</h5>
+            </div>
         </div>
     </div>
-    
 </template>
 
 <style scoped>
-
-    #main{
-        background-image: url("../assets/enterier.jpg");
+    .title{
+        font-family: cursive;
     }
 
+    iframe{
+        width: 70%;
+        height: 500px;
+    }
 
     .crumbs{
         background-color: #ffd360;
@@ -44,28 +49,17 @@
         height: 5%;
     }
 
-    .menu{
-        background-color: #ffd360;
-    }
-
     a{
         color: #155263;
     }
 </style>
 
 <script>
-import NewWorkers from "@/components/NewWorkers.vue"
-import HomeMenu from "@/components/HomeMenu.vue"
-
     export default{
-        name: "Home",
-        components: {
-            NewWorkers,
-            HomeMenu
-        },
+        name: "VideoGallery",
         data(){
-            return {
-                breadcrumb: [{text: this.$t('home'), route: '/', active: false}, {text: this.$t('newWorkers'), route: '', active: true}]
+            return{
+                breadcrumb: [{text: this.$t('gallery'), route: '/gallery', active: false}, {text: this.$t('videoG'), route: '/videoGallery', active: true}]
             }
         }
     }

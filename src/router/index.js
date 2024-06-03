@@ -8,6 +8,8 @@ import FoodDetail from "../views/FoodDetail.vue"
 import ActionsPage from '../views/ActionsPage.vue'
 import BestGradedPage from '../views/BestGradedPage.vue'
 import NewWorkersPage from '../views/NewWorkersPage.vue'
+import PhotoGallery from '../views/PhotoGallery.vue'
+import VideoGallery from '../views/VideoGallery.vue'
 
 
 const routes = [
@@ -52,7 +54,18 @@ const routes = [
     path: '/bestGraded',
     name: 'BestGraded',
     component: BestGradedPage
+  },
+  {
+    path: '/photoGallery',
+    name: 'PhotoGallery',
+    component: PhotoGallery
+  },
+  {
+    path: '/videoGallery',
+    name: 'VideoGallery',
+    component: VideoGallery
   }
+
 ]
 
 const router = createRouter({
