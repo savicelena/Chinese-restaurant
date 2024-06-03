@@ -119,5 +119,12 @@
     "Sort by Price": "Sort by price",
     "Sort by Name": "Sort by name",
     "Search by Name" : "Search by name",
-    "Search by Price" : "Search by price"
+    "Search by Price" : "Search by price",
+    "Sign In" : "Sign in",
+    "Username" : "Username",
+    "Password" : "Password",
+    "Register" : "Register",
+    "Don't have an account" : "Don't have an account",
+    "Already have an account" : "Already have an account",
+    "Password Check" : "Repeat password"
 }

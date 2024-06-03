@@ -119,5 +119,12 @@
     "Sort by Price": "Sortiraj po ceni",
     "Sort by Name": "Sortiraj po imenu",
     "Search by Name" : "Pretraži po imenu",
-    "Search by Price" : "Pretraži po ceni"
+    "Search by Price" : "Pretraži po ceni",
+    "Sign In" : "Prijavite se",
+    "Username" : "Korisničko ime",
+    "Password" : "Lozinka",
+    "Register" : "Registruj se",
+    "Don't have an account" : "Nemate nalog",
+    "Already have an account" : "Već imate nalog",
+    "Password Check" : "Potvrdite lozinku"
 }

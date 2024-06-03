@@ -2,9 +2,13 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import Gallery from '../views/Gallery.vue'
 import About from '../views/About.vue'
-import Account from '../views/Account.vue'
+
 import Menu from '../views/MenuFood.vue'
 import FoodDetail from "../views/FoodDetail.vue"
+import CheckSignIn from "../views/CheckSignIn.vue"
+import store from '../store'
+import SignIn from '../views/SignIn.vue'
+import RegisterVue from '../views/RegisterVue.vue'
 
 
 const routes = [
@@ -25,7 +29,8 @@ const routes = [
   {
     path: '/account',
     name: 'Account',
-    component: Account
+    component: CheckSignIn,
+    meta: {requiresAuth : true}
   },{
     path: '/about',
     name: 'About',
@@ -34,12 +39,34 @@ const routes = [
     path : '/menu/:id',
     name : 'FoodDetail',
     component : FoodDetail
+  },{
+    path: '/signin',
+    name: 'SignIn',
+    component : SignIn
+  },{
+    path : '/register',
+    name : 'RegisterVue',
+    component : RegisterVue
   }
 ]
+
+
 
 const router = createRouter({
   history: createWebHashHistory(),
   routes
+})
+
+router.beforeEach((to, from, next) => {
+  if (to.matched.some(record => record.meta.requiresAuth)) {
+    if (!store.getters.isSignedIn) {
+      next({ name: 'SignIn' })  // Ako korisnik nije prijavljen, preusmeri na SignIn
+    } else {
+      next()  // Ako je korisnik prijavljen, dozvoli navigaciju
+    }
+  } else {
+    next()  // Ako ruta ne zahteva autentifikaciju, dozvoli navigaciju
+  }
 })
 
 export default router
