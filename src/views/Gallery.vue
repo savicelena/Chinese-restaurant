@@ -11,6 +11,14 @@
 
 
             <div class="col-lg-10 col-md-9 col-sm-12">
+                <div class="divCrumbs mt-3">
+                    <ol class="breadcrumb crumbs">
+                        <li v-for="bread in breadcrumb" :key="bread.text" :class="bread.active == true ? 'breadcrumb-item active' : 'breadcrumb-item'">
+                            <router-link v-if="bread.active == false" :to="bread.route">{{bread.text}}</router-link>
+                            <span v-if="bread.active == true">{{bread.text}}</span>
+                        </li>
+                    </ol>
+                </div>
                 <PhotoGallery v-if="chosen[0] == true"></PhotoGallery>
                 <VideoGallery v-if="chosen[1] == true"></VideoGallery>
             </div>
@@ -49,6 +57,21 @@
     .links{
         font-family: cursive;
     }
+
+    .crumbs{
+        background-color: #ffd360;
+        justify-content: left;
+    }
+
+    .divCrumbs{
+        background-color: #ffd360;
+        display: inline-block;
+        height: 5%;
+    }
+
+    a{
+        color: #155263;
+    }
 </style>
 
 <script>
@@ -63,13 +86,22 @@
         },
         data(){
             return{
-                chosen: [true, false]
+                chosen: [true, false],
+                breadcrumb: [{text: this.$t('gallery'), route: '/gallery', active: false}, {text: this.$t('photoG'), route: '', active: true}]
             }
         },
         methods:{
             changeComponent(comp){
                 this.chosen[(comp+1)%2] = false;
                 this.chosen[comp] = true;
+                switch(comp){
+                    case 0:
+                        this.breadcrumb = [{text: this.$t('gallery'), route: '/gallery', active: false}, {text: this.$t('photoG'), route: '', active: true}];
+                        break;
+                    case 1:
+                        this.breadcrumb = [{text: this.$t('gallery'), route: '/gallery', active: false}, {text: this.$t('videoG'), route: '', active: true}];
+                        break;
+                }
             }
         }
     }

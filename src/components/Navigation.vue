@@ -3,7 +3,7 @@
   <div class="row">
     <nav class="navbar navbar-expand-lg navbar-custom col-sm-12">
         <ul class="navbarUl">
-            <li><router-link to="/" class="link">{{$t ('home')}}</router-link></li>
+            <li><router-link to="/"  class="link">{{$t ('home')}}</router-link></li>
             <li><router-link to="/gallery" class="link" >{{$t ('gallery')}}</router-link></li>
             <li><router-link to="/menu" class="link">{{$t ('menu')}}</router-link></li>
             <li><router-link to="/account" class="link" >{{$t ('myAccount')}}</router-link></li>
@@ -71,6 +71,7 @@
 
   .link{
     font-family: cursive;
+    text-decoration: none;
   }
 
 

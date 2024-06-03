@@ -5,13 +5,16 @@ import About from '../views/About.vue'
 import Account from '../views/Account.vue'
 import Menu from '../views/MenuFood.vue'
 import FoodDetail from "../views/FoodDetail.vue"
+import ActionsPage from '../views/ActionsPage.vue'
+import BestGradedPage from '../views/BestGradedPage.vue'
+import NewWorkersPage from '../views/NewWorkersPage.vue'
 
 
 const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: Home,
   },
   {
     path: '/gallery',
@@ -34,6 +37,21 @@ const routes = [
     path : '/menu/:id',
     name : 'FoodDetail',
     component : FoodDetail
+  },
+  {
+    path: '/offers',
+    name: 'Actions',
+    component: ActionsPage
+  },
+  {
+    path: '/newWorkers',
+    name: 'NewWorkers',
+    component: NewWorkersPage
+  },
+  {
+    path: '/bestGraded',
+    name: 'BestGraded',
+    component: BestGradedPage
   }
 ]
 

@@ -15,6 +15,11 @@ npm run serve
 npm install vue-i18n@next
 ```
 
+### For breadcrumbs
+```
+npm install bootstrap-vue-next
+```
+
 ### Compiles and minifies for production
 ```
 npm run build
