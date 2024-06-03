@@ -37,9 +37,7 @@
                         <span class="sr-only">Next</span>
                     </a>
                 </div>
-
             </div>
-
             <div class="col-sm-12 col-lg-6 text-center colAction">
                  <div class="carouselExampleIndicators carousel slide" id="carousel2" data-ride="carousel">
                     <ol class="carousel-indicators">
@@ -83,16 +81,13 @@
         </div>
     </div>
 </template>
-
 <style scoped>
-
     .actionRow{
         display: flex;
         justify-content: center;
         align-items: center;
         margin: auto;
     }
-
     #labelName{
         font-family: cursive;
         font-weight: bolder;
@@ -101,11 +96,9 @@
         -webkit-text-stroke: 3px #155263;
         padding: 5%;
     }
-
     img{
         height: 300px;
     }
-
     .carouselExampleIndicators{
         width: 50%;
         background-color: rgb(225, 207, 83, .5);
@@ -114,7 +107,6 @@
         width: 70%;
         margin-bottom: 5%;
     }
-
     .foodName{
         font-family: cursive;
         font-weight: bolder;
@@ -123,7 +115,6 @@
         -webkit-text-stroke: 1px #ffd360;;
         padding: 2%;
     }
-
     .colAction{
         display: flex;
         align-items: center;
@@ -131,7 +122,6 @@
     }
    
 </style>
-
 <script>
     export default{
         name: "Actions"

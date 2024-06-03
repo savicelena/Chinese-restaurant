@@ -16,7 +16,8 @@
                         </li>
                     </ol>
                 </div>
-                <home-initial></home-initial>
+                <BestGraded></BestGraded>
+                
                
             </div>
 
@@ -52,23 +53,23 @@
     }
 
     a{
-        color: #ffd360 !important;
+        color: #155263;
     }
 </style>
 
 <script>
-import HomeInitial from "@/components/HomeInitial.vue"
+import BestGraded from "@/components/BestGraded.vue"
 import HomeMenu from "@/components/HomeMenu.vue"
 
     export default{
         name: "Home",
         components: {
-            HomeInitial,
+            BestGraded,
             HomeMenu
         },
         data(){
             return {
-                breadcrumb: [{text: this.$t('home'), route: '/', active: true}]
+                breadcrumb: [{text: this.$t('home'), route: '/', active: false}, {text: this.$t('bestGraded'), route: '', active: true}]
             }
         }
     }
