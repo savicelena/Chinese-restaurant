@@ -1,16 +1,9 @@
 <template>
-    <div class="container-fluid borderUp">
+    <div class="container-fluid">
 
         <div class="row">
             <div class="col-sm-12">
-                <div class="divCrumbs mt-3">
-                    <ol class="breadcrumb crumbs">
-                        <li v-for="bread in breadcrumb" :key="bread.text" :class="bread.active == true ? 'breadcrumb-item active' : 'breadcrumb-item'">
-                            <router-link v-if="bread.active == false" :to="bread.route">{{bread.text}}</router-link>
-                            <span v-if="bread.active == true">{{bread.text}}</span>
-                        </li>
-                    </ol>
-                </div>
+                <BreadcrumbComp :breadcrumb="breadcrumb"></BreadcrumbComp>
             </div>
         </div>
         <div class="row">
@@ -73,10 +66,6 @@
 </template>
 
 <style scoped>
-
-    .borderUp{
-        border-top: 1px solid #155263;
-    }
     .column{
         border: 1px solid #155263;
     }
@@ -129,28 +118,24 @@
         border: 1px solid #155263;
     }
 
-    .crumbs{
-        background-color: #ffd360;
-        justify-content: left;
-    }
-
-    .divCrumbs{
-        background-color: #ffd360;
-        display: inline-block;
-        height: 5%;
-    }
+    
 
 
 </style>
 
 <script>
+    import BreadcrumbComp from '@/components/BreadcrumbComp.vue'
+    
     export default{
         name: "About",
         data(){
             return{
-                breadcrumb: [ {text: this.$t('about'), route: '', active: true}]
+                breadcrumb: [ {text: 'about', route: '', active: true}]
             }
             
+        },
+        components: {
+            BreadcrumbComp
         }
     }
 </script>

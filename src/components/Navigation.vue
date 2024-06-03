@@ -1,5 +1,5 @@
 <template>
-<div class="container">
+<div class="container-fluid bottomBorder">
   <div class="row">
     <nav class="navbar navbar-expand-lg navbar-custom col-sm-12">
         <ul class="navbarUl">
@@ -74,10 +74,11 @@
     text-decoration: none;
   }
 
+  .bottomBorder{
+    border-bottom: 1px solid #155263;
+  }
 
   
-
-
 </style>
 
 <script>
