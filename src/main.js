@@ -6,7 +6,7 @@ import { createI18n } from 'vue-i18n';
 import serbian from './translations/serbian.json'
 import english from './translations/english.json'
 
-
+import store from './store';
 
 const messages = {
     sr: serbian,
@@ -24,4 +24,5 @@ const forTranslation = createI18n({
 const app = createApp(App);
 app.use(forTranslation);
 app.use(router);
+app.use(store);
 app.mount("#app");
