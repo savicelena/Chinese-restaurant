@@ -29,39 +29,41 @@
       </div>
 
       <div class="col-sm-12 col-md-5">
-
-        <table id="orderTable" class="text">
-          <tr>
-            <td rowspan="2">
-              <h5>{{$t ('tasteIt')}}</h5>
-            </td>
-          </tr>
-          <tr colspan="2">
-            <td>
-              <label for="big">{{$t('big')}}</label> &nbsp;
-              <input type="radio" v-model="type" name="type" id="big" value="priceBig" @change="radioChanged()">
-            </td>
-            <td>
-              <label for="small">{{$t('small')}}</label> &nbsp;
-              <input type="radio" v-model="type" name="type" id="small" value="price" @change="radioChanged()">
-            </td>
-          </tr>
-          <tr>
-            <td>{{$t ('quantity')}}:</td>
-            <td>
-              <input type="number" v-model="quantity" name="quantity" id="quantity" @change="quantityChanged()">
-            </td>
-          </tr>
-          <tr>
-            <td>{{$t('currentPrice')}}:</td>
-            <td id="price">0</td>
-          </tr>
-         <tr colspan="2">
-            <td>
-              <button class="btn btn-light" @click="order()">{{$t("orderIt")}}</button>
-            </td>
-          </tr>
-        </table>
+        <form>
+          <table id="orderTable" class="text">
+            <tr>
+              <td rowspan="2">
+                <h5>{{$t ('tasteIt')}}</h5>
+              </td>
+            </tr>
+            <tr colspan="2">
+              <td>
+                <label for="big">{{$t('big')}}</label> &nbsp;
+                <input type="radio" v-model="type" name="type" id="big" value="priceBig" @change="radioChanged()">
+              </td>
+              <td>
+                <label for="small">{{$t('small')}}</label> &nbsp;
+                <input type="radio" v-model="type" name="type" id="small" value="price" @change="radioChanged()">
+              </td>
+            </tr>
+            <tr>
+              <td>{{$t ('quantity')}}:</td>
+              <td>
+                <input type="number" v-model="quantity" name="quantity" id="quantity" @change="quantityChanged()">
+              </td>
+            </tr>
+            <tr>
+              <td>{{$t('currentPrice')}}:</td>
+              <td id="price">0</td>
+            </tr>
+            <tr colspan="2">
+              <td>
+                <button class="btn btn-light" @click="order()">{{$t("orderIt")}}</button>
+              </td>
+            </tr>
+          </table>
+        </form>
+        
 
         <div class="grading">
           <form>
@@ -247,10 +249,10 @@
             "name": this.dish.name.en,
             "sum": parseInt(this.grade),
             "total": 1,
-            "avg": parseFloat(this.grade),
+            "avg": parseFloat(this.grade).toFixed(2),
             "photo": this.dish.photo
           });
-          document.getElementById("averageGrade").innerText = this.grade;
+          document.getElementById("averageGrade").innerText = parseFloat(this.grade).toFixed(2);
         }else{
           dishGrade.sum += parseInt(this.grade);
           dishGrade.total += 1;
