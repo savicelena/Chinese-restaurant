@@ -42,6 +42,15 @@
     "findUs": "Find us",
     "footer": "Copyright 2024, Magdalena Obradovic and Elena Savic, Software Engineering study program at University of Belgrade, School of Electrical Engineering",
     "welcomePage": "Welcome",
+    "big": "Big portion",
+    "small": "Small portion",
+    "gradeDish": "Grade the dish",
+    "tasteIt": "Taste it yourself",
+    "orderIt": "Order",
+    "quantity": "Quantity",
+    "currentPrice": "Price",
+    "mustSignIn": "You need to sign in to order something!",
+    "blankFields": "Some fields are blank!",
 
 
 

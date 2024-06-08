@@ -1,20 +1,28 @@
 [
     {
         "id": 5,
-        "name": "Chicken rice",
+        "name": {
+            "sr": "Hajnan piletina sa povrćem",
+            "en": "Hainase chicken rice"
+        },
         "photo": "/images/chicken_rice_lunch.jpeg",
-        "price": "$55",
+        "price": "$40",
+        "priceBig": "$60",
         "grade" : "4",
         "desc": {
-            "sr": "Opis na srpskom jeziku",
-            "en": "Description in English"
+            "sr": "Hajnan piletina sa povrćem je jelo koje se se sastoji od poširanje piletine i pirinča kao dodatka. Služi se sa čili sosom i najčešće sa krastavcem. Jelo je napravljeno od strane Hajnan imigranata iz južne Kine i preuzeto je od Hajnan jela koje se naziva Venčang piletina",
+            "en": "Hainanese chicken rice is a dish of poached chicken and seasoned rice, served with chilli sauce and usually with cucumber garnishes. It was created by immigrants from Hainan in southern China and adapted from the Hainanese dish Wenchang chicken."
         }
     },
     {
         "id": 6,
-        "name": "Barbecue",
+        "name": {
+            "sr": "Roštilj",
+            "en": "Barbecue"
+        },
         "photo": "/images/lunch_food2.jpg",
-        "price": "$65",
+        "price": "$45",
+        "priceBig" : "$70",
         "grade" : "4",
         "desc": {
             "sr": "Opis na srpskom jeziku",
@@ -23,9 +31,13 @@
     },
     {
         "id": 7,
-        "name": "Barbecue with pepper",
+        "name": {
+            "sr": "Roštilj sa biberom",
+            "en": "Barbecue with pepper"
+        },
         "photo": "/images/lunch_food3.jpeg",
         "price": "$25",
+        "priceBig": "$40",
         "grade" : "4",
         "desc": {
             "sr": "Opis na srpskom jeziku",
@@ -34,9 +46,13 @@
     },
     {
         "id": 8,
-        "name": "Soup",
+        "name": {
+            "sr": "Supa",
+            "en": "Soup"
+        },
         "photo": "/images/lunch_food4.jpg",
-        "price": "$35",
+        "price": "$25",
+        "priceBig": "$35",
         "grade" : "4",
         "desc": {
             "sr": "Opis na srpskom jeziku",

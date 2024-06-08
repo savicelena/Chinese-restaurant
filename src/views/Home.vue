@@ -50,6 +50,21 @@ import BreadcrumbComp from '@/components/BreadcrumbComp.vue'
             return {
                 breadcrumb: [{text: 'home', route: '/', active: true}]
             }
+        },
+        created(){
+            if(localStorage.getItem("grades") == null){
+                let grades = [];
+                localStorage.setItem("grades", JSON.stringify(grades));
+            }
+            if(localStorage.getItem("basket") == null){
+                let basket = [];
+                localStorage.setItem("basket", JSON.stringify(basket));
+            }
+            if(localStorage.getItem("orders") == null){
+                let orders = [];
+                localStorage.setItem("orders", JSON.stringify(orders));
+            }
+
         }
     }
 </script>
