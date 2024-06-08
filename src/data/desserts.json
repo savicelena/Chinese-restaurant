@@ -1,9 +1,13 @@
 [
     {
         "id": 9,
-        "name": "Chocolate",
+        "name": {
+            "sr": "Čokolada",
+            "en": "Chocolate"
+        },
         "photo": "/images/dessert1.jpg",
         "price": "$5",
+        "priceBig": "$10",
         "grade" : "4",
         "desc": {
             "sr": "Opis na srpskom jeziku",
@@ -12,9 +16,13 @@
     },
     {
         "id": 10,
-        "name": "Fortune cookies",
+        "name": {
+            "sr": "Kolačići sreće",
+            "en": "Fortune cookies"
+        },
         "photo": "/images/dessert4.png",
-        "price": "$25",
+        "price": "$15",
+        "priceBig": "$25",
         "grade" : "4",
         "desc": {
             "sr": "Opis na srpskom jeziku",
@@ -23,9 +31,13 @@
     },
     {
         "id": 11,
-        "name": "Cookies",
+        "name": {
+            "sr": "Kolačići",
+            "en": "Cookies"
+        },
         "photo": "/images/dessert3.jpg",
-        "price": "$15",
+        "price": "$5",
+        "priceBig": "$10",
         "grade" : "4",
         "desc": {
             "sr": "Opis na srpskom jeziku",
@@ -34,9 +46,13 @@
     },
     {
         "id": 12,
-        "name": "Gnochi",
+        "name": {
+            "sr": "Njoke",
+            "en": "Gnochi"
+        },
         "photo": "/images/dessert2.jpg",
-        "price": "$10",
+        "price": "$8",
+        "priceBig": "$12",
         "grade" : "4",
         "desc": {
             "sr": "Opis na srpskom jeziku",

@@ -4,18 +4,20 @@
     <div class="container">
         <div class="row">
             <div v-for="item in items" :key="item.id" class="col-lg-6 d-flex align-items-center mb-4" @click="selectFood(item.id)">
-                <img class="flex-shrink-0 img-fluid rounded" :src="item.photo" alt="" style="width: 80px;">
-                <div class="w-100 d-flex flex-column text-start ps-4">
-                    <h5 class="d-flex justify-content-between border-bottom pb-2">
-                        <span>{{ item.name }}</span>
-                        <span class="text-primary">{{ item.price }}</span>
-                        <span class="text-primary">{{ item.grade }}
-                            <i class="fa fa-star star-icon"></i>
-                        </span>
-                    </h5>
-                    <small class="fst-italic">{{ item.desc.en }}</small>
-                    
-                </div>
+                <router-link :to="'/menu/' + item.id">
+                    <img class="flex-shrink-0 img-fluid rounded" :src="item.photo" alt="" style="width: 80px;">
+                    <div class="w-100 d-flex flex-column text-start ps-4">
+                        <h5 class="d-flex justify-content-between border-bottom pb-2">
+                            <span>{{ item.name[this.$i18n.locale] }}</span>
+                            <span class="text-primary">{{ item.price }}</span>
+                            <span class="text-primary">{{ item.grade }}
+                                <i class="fa fa-star star-icon"></i>
+                            </span>
+                        </h5>
+                        <small class="fst-italic">{{ item.desc[this.$i18n.locale] }}</small>
+                        
+                    </div>
+                </router-link>
             </div>
         </div>
     </div>

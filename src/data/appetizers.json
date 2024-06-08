@@ -1,9 +1,13 @@
 [
     {
         "id": 1,
-        "name": "Dumplings",
+        "name": {
+            "sr": "Knedle",
+            "en": "Dumplings"
+        },
         "photo": "/images/appet1.jpg",
         "price": "$5",
+        "priceBig": "$10",
         "grade" : "4",
         "desc": {
             "sr": "Opis na srpskom jeziku",
@@ -12,9 +16,13 @@
     },
     {
         "id": 2,
-        "name": "Chinese dumplings",
+        "name": {
+            "sr": "Kineske knedle",
+            "en": "Chinese dumplings"
+        },
         "photo": "/images/appet2.png",
-        "price": "$25",
+        "price": "$15",
+        "priceBig": "$25",
         "grade" : "4",
         "desc": {
             "sr": "Opis na srpskom jeziku",
@@ -23,9 +31,13 @@
     },
     {
         "id": 3,
-        "name": "Salad",
+        "name": {
+            "sr": "Salata",
+            "en": "Salad"
+        },
         "photo": "/images/appet3.jpg",
-        "price": "$15",
+        "price": "$10",
+        "priceBig": "$15",
         "grade" : "4",
         "desc": {
             "sr": "Opis na srpskom jeziku",
@@ -34,9 +46,13 @@
     },
     {
         "id": 4,
-        "name": "Full appetizer",
+        "name": {
+            "sr": "Predjelo",
+            "en": "Full appetizer"
+        },
         "photo": "/images/appet4.jpg",
-        "price": "$10",
+        "price": "$8",
+        "priceBig": "$12",
         "grade" : "4",
         "desc": {
             "sr": "Opis na srpskom jeziku",

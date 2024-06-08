@@ -8,6 +8,8 @@
         </div>
         <div class="row">
 
+            <div class="col-sm-12 col-md-1"></div>
+
             <div class="col-md-5 col-sm-10 column text-center">
                 <h4 class="text mt-3">{{$t ('aboutUsTitle')}}</h4>
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-globe2" viewBox="0 0 16 16">
@@ -16,7 +18,7 @@
                 <p class="text mt-5">{{$t ('aboutUs')}}</p>
             </div>
 
-            <div class="col-md-5 col-sm-10 column">
+            <div class="col-md-5 col-sm-10 column text-center">
                 <div class="prize mt-3">
                     <div class="prizeText">
                         <h4 class="text">{{$t ('winner')}}</h4>
@@ -55,6 +57,7 @@
         </div>
 
         <div class="row">
+            <div class="col-sm-12 col-md-1"></div>
             <div class="col-sm-10 column align-items-center">
                 <h4 class="text mt-3">{{$t ('findUs')}}</h4>
                 <div class="map mt-3">

@@ -102,7 +102,7 @@
           if (this.sortType === 'price') {
             sortedData.sort((a, b) => parseFloat(a.price.replace('$', '')) - parseFloat(b.price.replace('$', '')));
           } else if (this.sortType === 'name') {
-            sortedData.sort((a, b) => a.name.localeCompare(b.name));
+            sortedData.sort((a, b) => a.name[this.$i18n.locale].localeCompare(b.name[this.$i18n.locale]));
           }
         }
         return sortedData;
@@ -110,7 +110,7 @@
       filteredItems() {
         let filteredData = this.sortedItems;
         if (this.searchQueryName) {
-          filteredData = filteredData.filter(item => item.name.toLowerCase().includes(this.searchQueryName.toLowerCase()));
+          filteredData = filteredData.filter(item => item.name[this.$i18n.locale].toLowerCase().includes(this.searchQueryName.toLowerCase()));
         }
         if (this.searchQueryPrice) {
           filteredData = filteredData.filter(item => item.price.replace('$', '').includes(this.searchQueryPrice));
