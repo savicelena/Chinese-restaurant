@@ -1,6 +1,18 @@
 <template>
     <div class="my-account grad">
         <hr>
+        <div class = "myData">
+            <table class="table table-stripped" >
+                <thead style="width: 70%;">
+                    <th>
+                        Korisničko ime
+                    </th>
+                    <th>Mejl</th>
+                    <th>Lozinka</th>
+                </thead>
+            </table>
+
+        </div>
         <div class="tabs">
             <nav class="navbar">
                 <a href="#" @click.prevent="changeTab(0)">
