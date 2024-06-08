@@ -136,5 +136,8 @@
     "Register" : "Register",
     "Don't have an account" : "Don't have an account",
     "Already have an account" : "Already have an account",
-    "Password Check" : "Repeat password"
+    "Password Check" : "Repeat password",
+    "My orders" : "My orders",
+    "My cart" : "My cart",
+    "Your order is on the way!" : "Your order is on the way!"
 }

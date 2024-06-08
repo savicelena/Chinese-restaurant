@@ -1,18 +1,10 @@
 <template>
     <div class="my-account grad">
-        <hr>
-        <div class = "myData">
-            <table class="table table-stripped" >
-                <thead style="width: 70%;">
-                    <th>
-                        Korisničko ime
-                    </th>
-                    <th>Mejl</th>
-                    <th>Lozinka</th>
-                </thead>
-            </table>
-
+        <div class="welcome">
+            <h6>{{ tr(msg.welcome) }} {{ account ? account.username : '' }}</h6>
+            <button class="btn btn-outline-dark" @click="handleSignOut">{{ tr(msg.signOut) }}</button>
         </div>
+        <hr>
         <div class="tabs">
             <nav class="navbar">
                 <a href="#" @click.prevent="changeTab(0)">
@@ -22,65 +14,20 @@
                     </div>
                 </a>
                 <a href="#" @click.prevent="changeTab(1)">
-                    <img src="@/assets/icons/truck.png" alt="Cart" class="icon" style="width: 60px; height: 60px">
+                    <img src="@/assets/icons/truck.png" alt="Orders" class="icon" style="width: 60px; height: 60px">
                     <div class="tab-text">
-                        <span class="bold">{{ tr(msg.myOrders) }}</span>
+                        <span class="bold">{{$t('My orders')}}</span>
                     </div>
                 </a>
             </nav>
         </div>
         <div class="content">
-            <div v-if="selectedTab === 0">
-                <h3>{{ tr(msg.myCart) }}:</h3>
-                <table class="table">
-                    <thead v-show="myCart.length > 0">
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">{{ tr(msg.item) }}</th>
-                            <th scope="col">{{ tr(msg.quantity) }}</th>
-                            <th scope="col">{{ tr(msg.remove) }}</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr v-for="(item, index) in myCart" :key="index">
-                            <th scope="row">{{ index + 1 }}</th>
-                            <td>{{ item.name }}</td>
-                            <td>{{ item.quantity }}</td>
-                            <td class="delbut">
-                                <button class="btn btn-outline-dark" @click="removeFromCart(item)">
-                                    {{ tr(msg.remove) }}
-                                </button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div v-if="selectedTab === 1">
-                <h3>{{ tr(msg.myOrders) }}:</h3>
-                <table class="table table-striped">
-                    <thead v-show="myOrders.length > 0">
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">{{ tr(msg.orderId) }}</th>
-                            <th scope="col">{{ tr(msg.date) }}</th>
-                            <th scope="col">{{ tr(msg.total) }}</th>
-                            <th scope="col">{{ tr(msg.status) }}</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr v-for="(order, index) in myOrders" :key="index">
-                            <th scope="row">{{ index + 1 }}</th>
-                            <td>{{ order.id }}</td>
-                            <td>{{ order.date }}</td>
-                            <td>{{ order.total }}</td>
-                            <td>{{ order.status }}</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+            <MyCartVue v-if="selectedTab === 0" :msg="msg" />
+            <MyOrdersVue v-if="selectedTab === 1" :msg="msg"/>
         </div>
     </div>
 </template>
+
 
 <style scoped>
 .grad {
@@ -103,10 +50,8 @@ h6 {
 .welcome {
     display: flex;
     justify-content: space-between;
-}
-
-.sobtn {
-    margin: 10px;
+    align-items: center;
+    padding: 10px;
 }
 
 .tabs {
@@ -129,8 +74,8 @@ h6 {
 }
 
 .navbar a img.icon {
-    width: 24px; /* Adjust the size as needed */
-    height: 24px; /* Adjust the size as needed */
+    width: 60px; 
+    height: 60px; 
 }
 
 .tab-text {
@@ -146,14 +91,33 @@ h6 {
 
 .content {
     margin-top: 20px;
+    background-color: #ffffff;
+}
+
+.btn-outline-dark {
+    background-color: #ffffff;
+    color: #000;
+    border: 1px solid #000;
+}
+
+.btn-outline-dark:hover {
+    background-color: #000;
+    color: #ffffff;
 }
 </style>
 
+
 <script>
+import MyCartVue from '@/components/MyCart.vue';
+import MyOrdersVue from '@/components/MyOrders.vue';
 import { mapGetters, mapActions } from 'vuex';
 
 export default {
     name: 'MyAccount',
+    components: {
+        MyCartVue,
+        MyOrdersVue,
+    },
     data() {
         return {
             selectedTab: 0,
@@ -166,62 +130,31 @@ export default {
                     sr: 'Moja korpa',
                     en: 'My Cart'
                 },
-                item: {
-                    sr: 'Proizvod',
-                    en: 'Item'
-                },
-                quantity: {
-                    sr: 'Količina',
-                    en: 'Quantity'
-                },
-                remove: {
-                    sr: 'Ukloni',
-                    en: 'Remove'
-                },
                 signOut: {
                     sr: 'Odjavi se',
                     en: 'Sign Out'
-                },
-                myOrders: {
-                    sr: 'Moje narudžbine',
-                    en: 'My Orders'
-                },
-                orderId: {
-                    sr: 'ID narudžbine',
-                    en: 'Order ID'
-                },
-                date: {
-                    sr: 'Datum',
-                    en: 'Date'
-                },
-                total: {
-                    sr: 'Ukupno',
-                    en: 'Total'
-                },
-                status: {
-                    sr: 'Status',
-                    en: 'Status'
                 }
             }
         }
     },
     computed: {
-        myCart() {
-            return this.$store.state.cartItems;
-        },
-        myOrders() {
-            return this.$store.state.orders.filter(order => order.accountId === this.account.id);
-        },
         ...mapGetters(['account'])
     },
     methods: {
-        ...mapActions(['signOut', 'removeFromCart']),
+        ...mapActions(['signOut']),
         changeTab(num) {
             this.selectedTab = num;
         },
         tr(messages) {
             return messages[this.$store.state.lang];
+        },
+        handleSignOut() {
+            this.signOut().then(()=>{
+                this.$router.push({ name: 'CheckSignIn' });
+            });
+            
         }
     }
 }
 </script>
+

@@ -77,7 +77,12 @@ const routes = [
     path: '/videoGallery',
     name: 'VideoGallery',
     component: VideoGallery
-  }
+  },
+  {
+    path: '/check-sign-in',
+    name: 'CheckSignIn',
+    component: CheckSignIn
+  },
 
 ]
 

@@ -136,5 +136,8 @@
     "Register" : "Registruj se",
     "Don't have an account" : "Nemate nalog",
     "Already have an account" : "Već imate nalog",
-    "Password Check" : "Potvrdite lozinku"
+    "Password Check" : "Potvrdite lozinku",
+    "My orders" : "Moje narudžbine",
+    "My cart" : "Moja korpa",
+    "Your order is on the way!" : "Vaša porudžbina uskoro stiže!"
 }
