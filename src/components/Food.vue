@@ -22,7 +22,7 @@
             </tr>
         </table>
     </div>
-    <Food v-if="selectedDish" :dish="getSelectedDishDetails()" /> <!-- Pass the selected dish details as a prop to Food component -->
+    <Food v-if="selectedDish" :dish="getSelectedDishDetails()" /> 
 </template>
 
 <style scoped>
@@ -71,11 +71,11 @@ h4 {
 }
 </style>
 <script>
-import Food from "@/components/Food.vue"; // Import Food component here
+import Food from "@/components/Food.vue"; 
 import food from "@/data/food";
 
 export default {
-    name: "MainComponent", // Give your main component a name
+    name: "MainComponent", 
     components: {
         Food
     },
@@ -90,7 +90,7 @@ export default {
             console.log("Selected dish: ", this.selectedDish);
         },
         getSelectedDishDetails() {    
-            return food.find(item => item.name === this.selectedDish); // Find the selected dish details
+            return food.find(item => item.name === this.selectedDish); 
         }
     }
 }

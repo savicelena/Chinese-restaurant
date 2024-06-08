@@ -9,10 +9,8 @@
                     <div class="w-100 d-flex flex-column text-start ps-4">
                         <h5 class="d-flex justify-content-between border-bottom pb-2">
                             <span>{{ item.name[this.$i18n.locale] }}</span>
-                            <span class="text-primary">{{ item.price }}</span>
-                            <span class="text-primary">{{ item.grade }}
-                                <i class="fa fa-star star-icon"></i>
-                            </span>
+                            <span class="text-primary">&nbsp;&nbsp;{{ item.price }}</span>
+                            
                         </h5>
                         <small class="fst-italic truncate">{{ item.desc[this.$i18n.locale] }}</small>
                         
@@ -29,11 +27,11 @@ export default {
     props: ['items', 'sortType'],
     data() {
         return {
-            mainCourses: [] // Inicijalizujemo listu glavnih jela
+            mainCourses: [] 
         }
     },
     created() {
-        // Učitavamo glavna jela kad se komponenta kreira
+        
         this.mainCourses = require('@/data/mainCourse.json');
     }
 }

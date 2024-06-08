@@ -11,7 +11,7 @@
               </div>
             </a>
           </div>
-          <!-- Dugme za sortiranje i polja za pretraživanje -->
+
           <div class="sort-menu mt-3">
             <button class="sort-button" @click="toggleDropdown">
               {{$t('Sort')}}
@@ -54,7 +54,7 @@
             </a>
           </nav>
         </div>
-        <div class="col-lg-10 col-md-9 col-sm-12" id="main">
+        <div class="col-lg-10 col-md-9 col-sm-12" id="main" style="margin-left: 20%;">
           <div v-if="chosen[0]">
             <main-course :items="filteredItems" @food-selected="navigateToFoodDetail"></main-course>
           </div>
@@ -92,7 +92,7 @@
         showDropdown: false,
         searchQueryName: '',
         searchQueryPrice: '',
-        foodData: mainCourses // Početni podaci su za glavna jela
+        foodData: mainCourses 
       };
     },
     computed: {
