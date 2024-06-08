@@ -150,7 +150,7 @@ export default {
         },
         handleSignOut() {
             this.signOut().then(()=>{
-                this.$router.push({ name: 'CheckSignIn' });
+                this.$router.push({ name: 'Home' });
             });
             
         }
