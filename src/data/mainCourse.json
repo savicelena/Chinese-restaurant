@@ -10,7 +10,7 @@
         "priceBig": "$60",
         "grade" : "4",
         "desc": {
-            "sr": "Hajnan piletina sa povrćem je jelo koje se se sastoji od poširanje piletine i pirinča kao dodatka. Služi se sa čili sosom i najčešće sa krastavcem. Jelo je napravljeno od strane Hajnan imigranata iz južne Kine i preuzeto je od Hajnan jela koje se naziva Venčang piletina",
+            "sr": "Hajnan piletina sa povrćem je jelo koje se se sastoji od poširanje piletine i pirinča kao dodatka. Služi se sa čili sosom i najčešće sa krastavcem. Jelo je napravljeno od strane Hajnan imigranata iz južne Kine i preuzeto je od Hajnan jela koje se naziva Venčang piletina.",
             "en": "Hainanese chicken rice is a dish of poached chicken and seasoned rice, served with chilli sauce and usually with cucumber garnishes. It was created by immigrants from Hainan in southern China and adapted from the Hainanese dish Wenchang chicken."
         }
     },
@@ -25,8 +25,8 @@
         "priceBig" : "$70",
         "grade" : "4",
         "desc": {
-            "sr": "Opis na srpskom jeziku",
-            "en": "Description in English"
+            "sr": "Jako začinjeno jelo koje potiče od naroda Tujia. Samo ime govori dosta o jelu, gde 'Ma' znači da dovodi do utrnuća jezika i 'La' ukazuje na začinjenost. Gosti u restoranima često sami biraju sastojke (meso i povrće) pre nego što kuvar krene sa spremanjem jela.",
+            "en": "Spicy and tongue-numbing dish that originated from the Tujia people. The name of the dish is self-descriptive, with 'Ma' meaning tongue-numbing and 'La' meaning spiciness. In restaurants, customers usually choose the ingredients (meat and vegetables) by themselves before the chef prepares the dish."
         }
     },
     {
@@ -40,8 +40,8 @@
         "priceBig": "$40",
         "grade" : "4",
         "desc": {
-            "sr": "Opis na srpskom jeziku",
-            "en": "Description in English"
+            "sr": "Jelo koje će vas naterati da naručite još jednu porciju. Priprema se od crnog pasulja koji je u kinesku kuhinju uveden iz Južne Amerike i od tada obara sve granice ukusa. Njegova kombinacija sa piletinom predstavlja unikatan spoj koji dovodi do punoće ukusa.",
+            "en": "The dish that will make you order one more portion. It is made from black beans that were introduced to Chinese cuisine from South America and from that time it is breaking all taste boundries. Its combination with chicken is unique and contributes to fullness of taste."
         }
     },
     {
@@ -55,8 +55,8 @@
         "priceBig": "$35",
         "grade" : "4",
         "desc": {
-            "sr": "Opis na srpskom jeziku",
-            "en": "Description in English"
+            "sr": "Tradicionalna kineska pileća supa koja obiluje začinima među kojima se ističu čili, biber i kim. Uz dodatak salate može predstavljati savršeno jelo za ručak.",
+            "en": "Traditional Chinese chicken soup that is full of spices, among which chill, pepper and cumin stand out. With the addition of salad it can be perfect dish for lunch."
         }
     }
 
