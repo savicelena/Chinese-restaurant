@@ -12,11 +12,8 @@
                         <button @click="increaseQuantity(cartItem)">+</button>
                     </p>
                     <p>{{ tr(msg.type) }}: 
-                        {% if cartItem.type == 'small' %}
-                            {{ tr('small') }}/small
-                        {% elif cartItem.type == 'big' %}
-                            {{ tr('big') }}/big
-                        {% endif %}
+                        <span v-if="cartItem.type == 'small'">{{ $t('small') }}</span>
+                        <span v-else-if="cartItem.type == 'big'">{{ $t('big') }}</span>
                     </p>
                     <p>{{ tr(msg.price) }}: {{ cartItem.price }}</p>
                 </div>
