@@ -63,7 +63,7 @@
                         <div class="carousel-item">
                             <div>
                                 <h3 class="foodName">{{$t ('recc3')}}</h3>
-                                <img class="d-block w-100"  src="../assets/nianGao.jpg" alt="First slide">
+                                <img class="d-block w-100"  src="../../public/images/dessert1.jpg" alt="First slide">
                                 <h3 class="foodName">{{$t ('action13')}}</h3>
                             </div>
                         </div>

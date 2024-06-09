@@ -1,26 +1,16 @@
 <template>
     <div class="container">
-        <div class="row">
-            <div v-for="item in items" :key="item.id" class="col-lg-6 d-flex align-items-center mb-4">
-                <router-link :to="'/menu/' + item.id">
-                    <img class="flex-shrink-0 img-fluid rounded" :src="item.photo" alt="" style="width: 80px;">
-                    <div class="w-100 d-flex flex-column text-start ps-4">
-                        <h5 class="d-flex justify-content-between border-bottom pb-2">
-                            <span>{{ item.name[this.$i18n.locale] }}</span>
-                            <span class="text-primary">&nbsp;&nbsp;{{ item.price }}</span>
-                        </h5>
-                        <small class="fst-italic truncate">{{ item.desc[this.$i18n.locale] }}</small>
-                    </div>
-                </router-link>
-            </div>
-        </div>
         <hr>
         <h3>{{ tr(msg.myCart) }}:</h3>
         <div v-if="cartItems.length > 0">
             <div v-for="(cartItem, index) in cartItems" :key="index" class="cart-item" style="margin-left: 10%;">
                 <div class="cart-item-info">
                     <h5>{{ cartItem.name[this.$i18n.locale] }}</h5>
-                    <p>{{ tr(msg.quantity) }}: {{ cartItem.quantity }}</p>
+                    <p>
+                        <button @click="decreaseQuantity(cartItem)">-</button>
+                        <span>{{ cartItem.quantity }}</span>
+                        <button @click="increaseQuantity(cartItem)">+</button>
+                    </p>
                     <p>{{ tr(msg.type) }}: {{ cartItem.type }}</p>
                     <p>{{ tr(msg.price) }}: {{ cartItem.price }}</p>
                 </div>
@@ -38,6 +28,7 @@
         </div>
     </div>
 </template>
+
 
 <script>
 export default {
@@ -83,7 +74,6 @@ export default {
     },
     methods: {
         fetchItems() {
-            // Add logic to fetch items if needed
         },
         fetchCartItems() {
             try {
@@ -161,7 +151,25 @@ export default {
             } catch (error) {
                 console.error("Error ordering item from cart:", error);
             }
+        },
+        increaseQuantity(cartItem) {
+            cartItem.quantity++;
+            this.updatePrice(cartItem, cartItem.quantity-1);
+        },
+        decreaseQuantity(cartItem) {
+            if (cartItem.quantity > 1) {
+                cartItem.quantity--;
+                this.updatePrice(cartItem, cartItem.quantity+1);
+            }
+        },
+        updatePrice(cartItem, prevQuantity) {
+            let sumPrice = parseFloat(cartItem.price);
+            let portionPrice = sumPrice / prevQuantity;
+            let quantity = parseInt(cartItem.quantity);
+            let price = quantity * portionPrice;
+            cartItem.price = price.toFixed(2);
         }
+    
     }
 }
 </script>

@@ -2,16 +2,16 @@
     {
         "id": 9,
         "name": {
-            "sr": "Čokolada",
-            "en": "Chocolate"
+            "sr": "Baozi",
+            "en": "Baozi"
         },
         "photo": "/images/dessert1.jpg",
         "price": "$5",
         "priceBig": "$10",
         "grade" : "4",
         "desc": {
-            "sr": "Opis na srpskom jeziku",
-            "en": "Description in English"
+            "sr": "Baozi su mekane, parene pogačice koje se tradicionalno pune slatkim nadevima, uključujući čokoladu.",
+            "en": "Baozi are soft, steamed buns that are traditionally filled with sweet fillings, including chocolate."
         }
     },
     {
@@ -25,38 +25,38 @@
         "priceBig": "$25",
         "grade" : "4",
         "desc": {
-            "sr": "Opis na srpskom jeziku",
-            "en": "Description in English"
+            "sr": "Kolačići sreće su hrskavi, tanki kolačići napravljeni od brašna, šećera, vanile i ulja od susama, sa papirnim proročanstvom skrivenim unutra.",
+            "en": "Fortune cookies are crisp, thin cookies made from flour, sugar, vanilla, and sesame oil, with a paper fortune hidden inside"
         }
     },
     {
         "id": 11,
         "name": {
-            "sr": "Kolačići",
-            "en": "Cookies"
+            "sr": "Mesečevi kolači",
+            "en": "Yue bing"
         },
         "photo": "/images/dessert3.jpg",
         "price": "$5",
         "priceBig": "$10",
         "grade" : "4",
         "desc": {
-            "sr": "Opis na srpskom jeziku",
-            "en": "Description in English"
+            "sr": "Ovi kolačići su okrugli i punjeni raznim nadevima poput paste od crvenog pasulja ili lotusa. Njihova tekstura je gusta i slatka.",
+            "en": "These cookies are round and filled with various fillings such as red bean paste or lotus. They have a dense and sweet texture"
         }
     },
     {
         "id": 12,
         "name": {
-            "sr": "Njoke",
-            "en": "Gnochi"
+            "sr": "Slatke loptice",
+            "en": "Tang yuan"
         },
         "photo": "/images/dessert2.jpg",
         "price": "$8",
         "priceBig": "$12",
         "grade" : "4",
         "desc": {
-            "sr": "Opis na srpskom jeziku",
-            "en": "Description in English"
+            "sr": "Slatke loptice su napravljene od lepljivog rižinog brašna, punjene slatkim nadjevima kao što su sezam, kikiriki ili pasta od crvenog pasulj",
+            "en": "Tang yuan are sweet balls made from glutinous rice flour, filled with sweet fillings such as sesame, peanuts, or red bean paste."
         }
     }
 

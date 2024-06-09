@@ -10,23 +10,23 @@
         "priceBig": "$10",
         "grade" : "4",
         "desc": {
-            "sr": "Opis na srpskom jeziku",
-            "en": "Description in English"
+            "sr": "Knedle su male kuglice testa punjene raznovrsnim nadevima poput mesa, povrća ili morskih plodova. Oblikuju se ručno i tradicionalno se kuvaju.",
+            "en": "Dumplings are small balls of dough filled with various fillings such as meat, vegetables, or seafood. They are shaped by hand and traditionally boiled."
         }
     },
     {
         "id": 2,
         "name": {
-            "sr": "Kineske knedle",
-            "en": "Chinese dumplings"
+            "sr": "Pohovani pužići od povrća",
+            "en": "Vegetarian Spring Rolls"
         },
         "photo": "/images/appet2.png",
         "price": "$15",
         "priceBig": "$25",
         "grade" : "4",
         "desc": {
-            "sr": "Opis na srpskom jeziku",
-            "en": "Description in English"
+            "sr": "Pohovani pužići od povrća su lagani, osvežavajući zalogaji koji se tradicionalno prave od tankih rezanaca od pirinčanog papira koji su punjeni raznim svežim povrćem i umočeni u umak od soje ili drugi umak po izboru.",
+            "en": "Vegetarian Spring Rolls are light, refreshing bites traditionally made from thin sheets of rice paper filled with various fresh vegetables and dipped in soy sauce or other sauce of choice."
         }
     },
     {
@@ -40,23 +40,23 @@
         "priceBig": "$15",
         "grade" : "4",
         "desc": {
-            "sr": "Opis na srpskom jeziku",
-            "en": "Description in English"
+            "sr": "Salata je osvežavajuća i ukusna mešavina raznovrsnog povrća poput kupusa, šargarepe, krastavaca i paradajza, obično začinjena sojinim sosom, susamovim uljem i pirinčanim sirćetom.",
+            "en": "The salad is a refreshing and tasty mixture of various vegetables such as cabbage, carrots, cucumbers, and tomatoes, typically dressed with soy sauce, sesame oil, and rice vinegar."
         }
     },
     {
         "id": 4,
         "name": {
-            "sr": "Predjelo",
-            "en": "Full appetizer"
+            "sr": "Dodir srca",
+            "en": "Dim sum"
         },
         "photo": "/images/appet4.jpg",
         "price": "$8",
         "priceBig": "$12",
         "grade" : "4",
         "desc": {
-            "sr": "Opis na srpskom jeziku",
-            "en": "Description in English"
+            "sr": "Dodir srca je tradicionalno kinesko predjelo koje se često poslužuje kao deo dim sum obroka ili kao zalogaj uz čaj.",
+            "en": "Dim sum is a traditional Chinese appetizer often served as part of a dim sum meal or as a snack with tea."
         }
     }
 
