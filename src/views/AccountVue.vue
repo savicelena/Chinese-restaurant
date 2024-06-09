@@ -1,4 +1,9 @@
 <template>
+    <div class="row">
+        <div class="col-sm-12">
+            <BreadcrumbComp :breadcrumb="breadcrumb"></BreadcrumbComp>
+        </div>
+    </div>
     <div class="my-account grad">
         <div class="welcome">
             <h6>{{ tr(msg.welcome) }} {{ account ? account.username : '' }}</h6>
@@ -110,6 +115,7 @@ h6 {
 <script>
 import MyCartVue from '@/components/MyCart.vue';
 import MyOrdersVue from '@/components/MyOrders.vue';
+import BreadcrumbComp from '@/components/BreadcrumbComp.vue'
 import { mapGetters, mapActions } from 'vuex';
 
 export default {
@@ -117,6 +123,7 @@ export default {
     components: {
         MyCartVue,
         MyOrdersVue,
+        BreadcrumbComp
     },
     data() {
         return {
@@ -134,7 +141,8 @@ export default {
                     sr: 'Odjavi se',
                     en: 'Sign Out'
                 }
-            }
+            },
+            breadcrumb: [{text: 'myAccount', route: '/account', active: true}]
         }
     },
     computed: {

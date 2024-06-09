@@ -93,5 +93,9 @@ img {
       text-overflow: ellipsis;
       max-width: 300px;
     }
+
+    a{
+        color: #155263;
+    }
 </style>
 

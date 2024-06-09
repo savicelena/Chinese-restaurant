@@ -1,6 +1,11 @@
 <template>
   <div class="container-fluid">
     <div class="row">
+        <div class="col-sm-12">
+            <BreadcrumbComp :breadcrumb="breadcrumb"></BreadcrumbComp>
+        </div>
+    </div>
+    <div class="row">
 
       <div class="col-sm-12 col-md-5">
         <table class="text">
@@ -186,7 +191,7 @@
 </style>
 
 <script>
-
+ import BreadcrumbComp from '@/components/BreadcrumbComp.vue'
 
   export default{
     name: "FoodDetail",
@@ -200,9 +205,11 @@
         allGrades: '',
         basket: '',
         translationsEn: '',
-        translationsSr: ''
+        translationsSr: '',
+        breadcrumb: [{text: 'menu', route: '/menu', active: false}, {text: '', route: '/menu/'+this.id, active: true}]
       }
     },
+    components: {BreadcrumbComp},
     created(){
       this.id = this.$route.params.id;
       let mainCourses = require('@/data/mainCourse.json');
@@ -219,6 +226,7 @@
       }
       this.allGrades = JSON.parse(localStorage.getItem("grades"));
       this.basket = JSON.parse(localStorage.getItem("basket"));
+      this.breadcrumb[1].text = this.dish.name.en;
       
     },
     mounted(){

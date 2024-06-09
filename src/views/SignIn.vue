@@ -1,5 +1,10 @@
 <template>
-  <div class="sign-in-container">
+  <div class="row">
+        <div class="col-sm-12">
+            <BreadcrumbComp :breadcrumb="breadcrumb"></BreadcrumbComp>
+        </div>
+  </div>
+  <div class="sign-in-container signDiv">
     <h2>{{$t('Sign In')}}</h2>
     <form @submit.prevent="signInUser">
       <div class="form-group">
@@ -18,13 +23,15 @@
 
 <script>
 import { mapActions } from 'vuex';
+import BreadcrumbComp from '@/components/BreadcrumbComp.vue'
 
 export default {
   name: "SignIn",
   data() {
     return {
       username: '',
-      password: ''
+      password: '',
+      breadcrumb: [{text: 'myAccount', route: '/account', active: true}]
     };
   },
   methods: {
@@ -38,7 +45,8 @@ export default {
         alert(error.message);
       }
     }
-  }
+  },
+  components: {BreadcrumbComp}
 };
 </script>
 
@@ -84,5 +92,10 @@ button:hover {
 p {
   margin-top: 15px;
   text-align: center;
+}
+
+.signDiv{
+  margin-top: 2%;
+  margin-bottom: 3%;
 }
 </style>

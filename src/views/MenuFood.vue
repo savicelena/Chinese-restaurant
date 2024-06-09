@@ -1,6 +1,11 @@
 <template>
-    <div class="container-xxl py-5">
+    <!-- <div class="container-xxl py-5"> -->
       <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+              <BreadcrumbComp :breadcrumb="breadcrumb"></BreadcrumbComp>
+          </div>
+        </div>
         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
           <div class="download-menu">
             <h1 class="mb-3">{{$t('Food menu')}}</h1>
@@ -66,7 +71,7 @@
           </div>
         </div>
       </div>
-    </div>
+    <!-- </div> -->
   </template>
   
   <script>
@@ -76,13 +81,15 @@
   import mainCourses from "@/data/mainCourse.json";
   import desserts from "@/data/desserts.json";
   import appetizers from "@/data/appetizers.json";
+  import BreadcrumbComp from '@/components/BreadcrumbComp.vue'
   
   export default {
     name: "MenuFood",
     components: {
       MainCourse,
       Dessert,
-      Appetizer
+      Appetizer,
+      BreadcrumbComp
     },
     data() {
       return {
@@ -92,7 +99,8 @@
         showDropdown: false,
         searchQueryName: '',
         searchQueryPrice: '',
-        foodData: mainCourses 
+        foodData: mainCourses,
+        breadcrumb: [{text: 'menu', route: '/menu', active: true}]
       };
     },
     computed: {
