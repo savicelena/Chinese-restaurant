@@ -17,8 +17,8 @@
     {
         "id": 6,
         "name": {
-            "sr": "Roštilj",
-            "en": "Barbecue"
+            "sr": "Ma La Xiang Guo",
+            "en": "Ma La Xiang Guo"
         },
         "photo": "/images/lunch_food2.jpg",
         "price": "$45",
@@ -32,10 +32,10 @@
     {
         "id": 7,
         "name": {
-            "sr": "Roštilj sa biberom",
-            "en": "Barbecue with pepper"
+            "sr": "Piletina sa crnim pasuljem",
+            "en": "Chicken with black beans"
         },
-        "photo": "/images/lunch_food3.jpeg",
+        "photo": "/images/lunch_food3.jpg",
         "price": "$25",
         "priceBig": "$40",
         "grade" : "4",
@@ -47,8 +47,8 @@
     {
         "id": 8,
         "name": {
-            "sr": "Supa",
-            "en": "Soup"
+            "sr": "Začinjena pileća supa",
+            "en": "Spicy chicken soup"
         },
         "photo": "/images/lunch_food4.jpg",
         "price": "$25",

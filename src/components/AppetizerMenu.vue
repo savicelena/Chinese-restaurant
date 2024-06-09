@@ -13,7 +13,7 @@
                             <span class="text-primary">&nbsp; {{ item.price }}</span>
                             
                         </h5>
-                        <small class="fst-italic">{{ item.desc[this.$i18n.locale] }}</small>
+                        <small class="fst-italic truncate">{{ item.desc[this.$i18n.locale] }}</small>
                         
                     </div>
                 </router-link>
@@ -90,5 +90,12 @@ img {
     margin-left: 5px; 
     color: #ffcc00; 
 }
+
+.truncate{
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 300px;
+    }
 </style>
 

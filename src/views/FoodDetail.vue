@@ -88,7 +88,7 @@
         
     <div class="col-sm-12 col-md-2 d-flex mt-5" >
       <div id="averageGradeDiv">
-        <h4 id="averageGrade"></h4>
+        <h4 id="averageGrade">0</h4>
       </div>
     </div>
 	
@@ -222,7 +222,7 @@
       
     },
     mounted(){
-      let myGrade = this.allGrades.find( grade=> grade.name == this.dish.name.en);
+      let myGrade = this.allGrades.find( grade=> grade.name.en == this.dish.name.en);
       if(myGrade != null){
         document.getElementById("averageGrade").innerText = myGrade.avg;
       }
@@ -243,10 +243,10 @@
         }
       },
       addGrade(){
-        let dishGrade = this.allGrades.find(dish => dish.name == this.dish.name.en);
+        let dishGrade = this.allGrades.find(dish => dish.name.en == this.dish.name.en);
         if(dishGrade == null){
           this.allGrades.push({
-            "name": this.dish.name.en,
+            "name": this.dish.name,
             "sum": parseInt(this.grade),
             "total": 1,
             "avg": parseFloat(this.grade).toFixed(2),

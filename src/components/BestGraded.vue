@@ -4,7 +4,7 @@
             
             <div class="col-sm-12 text-center divGrades text">
                 <div v-for="grade in sortedGrades" :key="grade.name" class="grades">
-                    <h2>{{grade.name}}</h2>
+                    <h2>{{grade.name[this.$i18n.locale]}}</h2>
                     <img :src="grade.photo" alt="">
                     <h5>{{grade.avg}}</h5>
                 </div>
