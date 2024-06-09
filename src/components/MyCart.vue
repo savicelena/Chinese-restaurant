@@ -11,7 +11,13 @@
                         <span>{{ cartItem.quantity }}</span>
                         <button @click="increaseQuantity(cartItem)">+</button>
                     </p>
-                    <p>{{ tr(msg.type) }}: {{ cartItem.type }}</p>
+                    <p>{{ tr(msg.type) }}: 
+                        {% if cartItem.type == 'small' %}
+                            {{ tr('small') }}/small
+                        {% elif cartItem.type == 'big' %}
+                            {{ tr('big') }}/big
+                        {% endif %}
+                    </p>
                     <p>{{ tr(msg.price) }}: {{ cartItem.price }}</p>
                 </div>
                 <button class="btn btn-outline-dark" @click="removeFromCart(cartItem)">
