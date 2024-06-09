@@ -3,11 +3,11 @@
   <div class="row">
     <nav class="navbar navbar-expand-lg navbar-custom col-sm-12">
         <ul class="navbarUl">
-            <li><router-link to="/"  class="link">{{$t ('home')}}</router-link></li>
-            <li><router-link to="/gallery" class="link" >{{$t ('gallery')}}</router-link></li>
-            <li><router-link to="/menu" class="link">{{$t ('menu')}}</router-link></li>
-            <li><router-link to="/account" class="link" >{{$t ('myAccount')}}</router-link></li>
-            <li><router-link to="/about" class="link">{{$t ('about')}}</router-link></li>
+            <li><router-link to="/"  class="link" id="/" @click="clickLink('/')">{{$t ('home')}}</router-link></li>
+            <li><router-link to="/gallery" class="link" id="/gallery" @click="clickLink('/gallery')">{{$t ('gallery')}}</router-link></li>
+            <li><router-link to="/menu" class="link" id="/menu" @click="clickLink('/menu')">{{$t ('menu')}}</router-link></li>
+            <li><router-link to="/account" class="link" id="/signin" @click="clickLink('/signin')">{{$t ('myAccount')}}</router-link></li>
+            <li><router-link to="/about" class="link" id="/about" @click="clickLink('/about')">{{$t ('about')}}</router-link></li>
             <li class="dropdown" id="drop">
                 <a class="nav-link dropdown-toggle link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 {{$t ('langChoose')}}
@@ -57,6 +57,11 @@
     color: #155263;
   }
 
+  nav a.router-link-exact-active {
+        color: chocolate !important;
+  }  
+
+
   .dropdown{
     align-content: left;
   }
@@ -84,9 +89,66 @@
 <script>
     export default{
         name: "Navigation",
+        data(){
+          return{
+            signed: ''
+          }
+        },
         methods: {
           changeLang(lang){
             this.$i18n.locale = lang;  
+          },
+          clickLink(route){
+            let currentRoute = this.$route.path;
+            if(localStorage.getItem("currentAccount") != null && route == '/signin'){
+              route = "/account";
+            }
+            if(currentRoute == "/account"){
+              currentRoute = "/signin";
+            }else if(currentRoute == '/offers' || currentRoute == '/bestGraded' || currentRoute == '/newWorkers'){
+              currentRoute = '/';
+            }else if(currentRoute == '/photoGallery' || currentRoute == '/videoGallery'){
+              currentRoute = '/gallery';
+            }else if(currentRoute.includes("/menu")){
+              currentRoute = '/menu';
+            }
+            document.getElementById(currentRoute).style.color = "#155263";
+            
+            switch(route){
+              case "/":
+              case "/offers":
+              case "/newWorkers":
+              case "/bestGraded":
+                document.getElementById("/").style.color = "chocolate";
+                break;
+              case "/gallery":
+                document.getElementById("/gallery").style.color = "chocolate";
+                break;
+              case "/menu":
+                document.getElementById("/menu").style.color = "chocolate";
+                break;
+              case "/signin":
+              case "/account":
+                document.getElementById("/signin").style.color = "chocolate";
+                break;
+              case "/about":
+                document.getElementById("/about").style.color = "chocolate";
+                break;
+            }
+          }
+        },
+        created(){
+          if(localStorage.getItem("currentAccount") != null){
+            this.signed = true;
+          }
+        },
+        watch: {
+          '$route'(to, from){
+            if(from.path == '/account' && to.path == '/'){
+              document.getElementById("/signin").style.color = "#155263";
+            }else if(from.path == '/newWorkers' && to.path == "/about"){
+              document.getElementById("/").style.color = "#155263"
+            }
           }
         }
     }
